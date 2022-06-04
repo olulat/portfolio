@@ -1,0 +1,204 @@
+
+/* Global  */
+
+:root {
+    --primaryColo: #609d9f;
+    --primaryHsl: hsl(182, 50%, 60%);
+    --textColor: rgb(85, 84, 84);
+    --white: #ffffff;
+    --cardBackgroundColor: #222;
+    --bodyColo: #f2f2f2;
+    --black: #000;
+    --headingColor: #333;
+    --navLinksFont: "Roboto Serif", sans-serif;
+    --headingFont: "Roboto Mono", monospace;
+    --PoppinsFont: "Poppins", sans-serif;
+    --brandFont: "Nunito", sans-serif;
+}
+
+.container-1 {
+    max-width: 1120px;
+    margin: auto;
+}
+
+.project-nav-wrap {
+    margin: 0 2rem;
+    padding-top: 4rem;
+}
+
+.project-card-wrap{
+    margin: 0 2rem 2rem 2rem;
+}
+
+/* Search  */
+
+.project-form-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+.project-input {
+    padding: .6rem .2rem;
+    flex: 1;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    color: var(--textColor);
+    border-bottom: 2px solid var(--primaryColo);
+    text-overflow: ellipsis;
+}
+
+.project-input:focus{
+    outline: none;
+}
+
+.project-search-btn{
+    background: var(--primaryColo);
+    border: none;
+    cursor: pointer;
+    padding: .4rem 2rem;
+    border-radius: 10px 10px 10px 0px;
+}
+
+.search-form-icon{
+   display: flex;
+   align-items: center;
+   color: var(--white);
+}
+
+/* Categovery  */
+
+.project-cat-list-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+.project-cat-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    gap: .3rem;
+}
+
+.project-cat-link{
+    color: var(--primaryColo);
+    padding: .5rem;
+    font-size: 1.1rem;
+    font-family: var(--navLinksFont);
+    border: none;
+    background: none;
+    border-radius:10px ;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.project-cat-link:hover{
+background: var(--primaryColo);
+    color: var(--white);
+}
+
+.section-active {
+    background: var(--primaryColo);
+    color: var(--white);
+}
+
+/* Drop down  */
+
+.dropdown-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+    padding: 2rem .5rem;
+    max-width: 500px;
+}
+
+.dropdown-span{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.dropdown-heading{
+    color: var(--primaryColo);
+    font-size: 1.2rem;
+    font-family: var(--navLinksFont);
+}
+
+.dropdown-icon-span{
+    height: 2rem;
+    width: 2rem;
+    background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="none" stroke="%23609d9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 9l8 8l8-8"%2F%3E%3C%2Fsvg%3E');
+    background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+    transition: all 0.9s ease-in-out;
+}
+
+.dropdown-selection{
+    display: none;
+    flex-direction: column;
+    gap: .5rem;
+    background: var(--primaryColo);
+    width: 100%;
+    padding: 1rem;
+    color: var(--bodyColo);
+    font-size: 1.2rem;
+}
+
+.dropdown-checkbox{
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.dropdown-checkbox-wrap{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dropdown-checkbox-btn-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.checkboc-clear-btn,.checkboc-submit-btn{
+    background: none;
+    border: none;
+    color: var(--bodyColo);
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    border-bottom: 3px solid var(--bodyColo);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.checkboc-clear-btn:hover,
+.checkboc-submit-btn:hover{
+    color: var(--primaryHsl);
+    border-bottom: 3px solid var(--primaryHsl);
+}
+/* JS styling  */
+
+.project-active-togler{
+    display: flex;
+}
+
+.dropdown-icon-change{
+    background: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="none" stroke="%23609d9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 15l8-8l8 8"%2F%3E%3C%2Fsvg%3E');
+    background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+}
+
