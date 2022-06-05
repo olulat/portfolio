@@ -48,15 +48,24 @@ const projectList = [
     },
 ]
 
-// Loading The projectList 
-
+ 
 const projectContentWrap = document.querySelector(".my-work-contenet");
+const filterBtnList = document.querySelector(".project-cat-list");
 
+// Loading The projectList
 window.addEventListener("DOMContentLoaded", function() {
+
+    // Displaying the projects 
     displayProjectList(projectList)
+    //displaying the Filter BTN
+    displayFilterButtons()
+
+   
 })
 
 
+
+// Display Project Card function 
 
 function displayProjectList(projectArray) {
     let displayProject = projectArray.map(function(item) {
@@ -97,5 +106,53 @@ function displayProjectList(projectArray) {
    displayProject = displayProject.join("");
    projectContentWrap.innerHTML = displayProject;
 }
+
+// Display Project fiter BTN and adding Function
+
+function displayFilterButtons() {
+     const allTypes = projectList.reduce(function(values,item){
+        if (!values.includes(item.type)) {
+            values.push(item.type)
+        }
+    return values
+    },['all'])
+const typeBtns = allTypes.map(function(btn){
+
+    return`
+    <li><button class="project-filter-btn" data-id=${btn}>${btn}</button></li>
+    `
+}).join('')
+filterBtnList.innerHTML = typeBtns
+const filterBtn = document.querySelectorAll(".project-filter-btn");
+
+// Adding Filter function
+
+filterBtn.forEach(function(btn) {
+    btn.addEventListener('click',function(e) {
+        const typeOfProject =e.currentTarget.dataset.id
+        const projectType = projectList.filter(function (projectCard) {
+        
+            if (projectCard.type === typeOfProject) { 
+                return projectCard
+            }
+            
+        })
+        if (typeOfProject === 'all') { 
+                return displayProjectList(projectList)
+            }
+
+            else{
+                displayProjectList(projectType)
+            }
+    })
+})
+}
+
+
+// Adding Search Bar Function 
+
+
+// Displaying Checkbox Filter and adding Funcition
+
 
 
