@@ -5,7 +5,7 @@ const projectList = [
         id:1,
         type:"web",
         img:"https://source.unsplash.com/p-xSl33Wxyc",
-        title:"Project Name",
+        title:"let",
         language:["HTML/CSS","js","React","SQL",],
         visit:"https://www.google.com/",
         code:"www.linktocode.com",
@@ -46,11 +46,26 @@ const projectList = [
         visit:"www.linktolife.com",
         code:"www.linktocode.com",
     },
+
+     {
+        id:6,
+        type:"api",
+        img:"https://secure.img1-cg.wfcdn.com/im/92316237/resize-h445%5Ecompr-r85/5575/55758946/Wrapped+Canvas+Photograph.jpg",
+        title:"cat",
+        language:["fish","js","feed","eat",],
+        visit:"www.linktolife.com",
+        code:"www.linktocode.com",
+    },
 ]
 
  
 const projectContentWrap = document.querySelector(".my-work-contenet");
 const filterBtnList = document.querySelector(".project-cat-list");
+const searchInput = document.querySelector("[data-search]")
+const checkBoxWrap = document.querySelector(".dropdown-selection");
+
+
+
 
 // Loading The projectList
 window.addEventListener("DOMContentLoaded", function() {
@@ -58,17 +73,19 @@ window.addEventListener("DOMContentLoaded", function() {
     // Displaying the projects 
     displayProjectList(projectList)
     //displaying the Filter BTN
-    displayFilterButtons()
+    displayFilterButtons()  
 
-   
+    // Check box function 
+    checkBoxDisplay()
 })
+
 
 
 
 // Display Project Card function 
 
-function displayProjectList(projectArray) {
-    let displayProject = projectArray.map(function(item) {
+function displayProjectList(placeHolder) {
+    let displayProject = placeHolder.map(function(item) {
         let langUsed = item.language.map(myFunction);
         langUsed = langUsed.join(" ");
         
@@ -115,7 +132,7 @@ function displayFilterButtons() {
             values.push(item.type)
         }
     return values
-    },['all'])
+    },['All'])
 const typeBtns = allTypes.map(function(btn){
 
     return`
@@ -137,7 +154,7 @@ filterBtn.forEach(function(btn) {
             }
             
         })
-        if (typeOfProject === 'all') { 
+        if (typeOfProject === 'All') { 
                 return displayProjectList(projectList)
             }
 
@@ -150,9 +167,79 @@ filterBtn.forEach(function(btn) {
 
 
 // Adding Search Bar Function 
+  
+   const myinput = searchInput.addEventListener("input", function(e) {
+        const inputValue = e.target.value
+        
+        const projectSearch = projectList.filter(function (itemFind) {
+            if (itemFind.title.includes(inputValue)) {
+                return itemFind
+            }
+        })
+
+         if (projectSearch) {
+               return displayProjectList(projectSearch)
+            } 
+   
+})
+ 
 
 
-// Displaying Checkbox Filter and adding Funcition
+
+
+// Displaying Filter check box
+
+function checkBoxDisplay() {
+     let langList = projectList.map(function(item) {     
+  let langUsed = item.language.map(function(lang){return lang});     
+    return langUsed   
+   });
+let checkBoxLabel = ["All",...new Set(langList.flat())]
+const allLabel = checkBoxLabel.map((labelList) => {
+
+      return `
+          <li class="dropdown-checkbox-wrap">
+                            <input class="dropdown-checkbox ${labelList}" type="radio" name="filter-by-lang" data-id=${labelList}>
+                           <label>${labelList}</label>
+                           </li>
+        `
+}).join('');
+checkBoxWrap.innerHTML = allLabel
+
+// Add Click events to check box 
+const checkBtn = document.querySelectorAll(".dropdown-checkbox");
+
+
+
+checkBtn.forEach(function(btn) {
+    btn.addEventListener('click',function(e) {
+        const lang =e.currentTarget.dataset.id
+        const projectType = projectList.filter(function (itemFind) {
+       
+            if (itemFind.language.includes(lang)) { 
+                return itemFind
+            }
+        })
+
+        if (projectType) {
+               return displayProjectList(projectType)
+            } 
+
+
+            else{
+                displayProjectList(projectList)
+            }
+
+
+    })
+  
+})
+const checkAllBtn = document.querySelector(".All")
+checkAllBtn.addEventListener('click',function () {
+     displayProjectList(projectList)
+})
+
+}
 
 
 
