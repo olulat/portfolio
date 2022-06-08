@@ -5,21 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="/js/app.js" defer></script>
-    <title>Home</title>
+    <script type="module" src="/js/app.js" defer></script>
+    <script type="module" src="/js/ paginate.js"></script>
+    <title>Projecs</title>
 </head>
 <body>
   
-    <header>
-        <nav class="nav">
+    <header id="home">
+        <nav id="nav">
             <div class="nav-wrap container-1">
                 
                 <div class="mobile-nav-wrap">
                     <a href="/" class="brand">Latee<span class="brnd-span">folu</span></a>
                     
                     <span class="toggle-wrap">
-                        <svg class="toggle-btn" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2.5em"
-                            height="2.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <svg class="toggle-btn" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                            height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                             <path fill="currentColor" fill-rule="evenodd" d="M3 16h18v2H3v-2Zm0-5h18v2H3v-2Zm0-5h18v2H3V6Z" />
                         </svg>
                     </span>
@@ -28,10 +29,10 @@
                 <div class="nav-items">
                     <ul class="nav-link-list">
                         <li><a href="/" class="nav-links">Home</a></li>
-                        <li><a href="#about" class="nav-links">About</a></li>
-                        <li><a href="/pages/project.html" class="nav-links">Project</a></li>
-                        <li><a href="/pages/project.html" class="nav-links">API</a></li>
-                        <li><a href="#contact" class="nav-links">Contact</a></li>
+                        <li><a href="#about" class="nav-links scroll-link">About</a></li>
+                        <li><a href="#my-work" class="nav-links scrow-link">recent project</a></li>
+                        <li><a href="/pages/project.html" class="nav-links">all project</a></li>
+                        <li><a href="#contact" class="nav-links scroll-link">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -238,7 +239,7 @@
 
             <div class="about-card-content">
                 <h2 class="about-name">My Name is Lateef Olukuewu,I'm a <span class="about-span">Full stack Developer</span></h2>
-                <p class="about-description">I build new projects just to tickle my brain and love teaching others how they're made.
+                <p class="about-description">I build new projects just to tickle my brain, and I like teaching others how they're made.
                 While I keep Busy with my day job, I still take interviews in search of a great team & projects that interest
                 me.</p>
 
@@ -270,7 +271,7 @@
             </div>
             <div class="thchnical-card-body">
                 <p>knowledge of HTML, CSS, JavaScript,React NodeJS,Java,Python</p>
-                <p> understanding of agile Development practices, DevOps pipelines
+                <p> understanding of agile Development practices, DevOps pipelines.
                 </p>
             </div>
         </div>
@@ -288,9 +289,9 @@
                 <h3 class="thch-head-title">Hardware/OS</h3>
             </div>
             <div class="thchnical-card-body">
-                <p>Developing robust business cases to support any IT operating model change, Sourcing and/or IT transformation project
+                <p>Developing robust business cases to support any IT operating model change, Sourcing and/or IT transformation project.
                 </p>
-                <p> skilled at researching, troubleshooting and solving complex IT equment issues </p>
+                <p> skilled at researching, troubleshooting and solving complex IT equment issues. </p>
             </div>
         </div>
         
@@ -312,7 +313,7 @@
             </div>
             <div class="thchnical-card-body">
                 <p>Experience with Microsoft Azure IaaS, Microsoft Azure PaaS </p>
-                <p>Automation and Powershell,Microsoft system centre suite </p>
+                <p>Automation and Powershell,Microsoft system centre suite. </p>
                 </p>
             </div>
         </div>
@@ -326,140 +327,14 @@
     </section>
 
 
-    <section class="my-work">
+    <section class="my-work" id="my-work">
 
         <div class="my-work-wrap">
 <h2 class="my-work-contenet-tittle">My Recent Projects</h2>
             <div class="my-work-contenet container-1">
 
                 
-                <div class="my-work-card">
-                    <div class="my-work-card-heading">
-                        <div class="my-work-card-image">
-                            <img src="https://source.unsplash.com/p-xSl33Wxyc" alt="Project Photo" class="my-work-img">
-                        </div>
-                        <h3 class="my-work-card-title">Project Name</3>
-                    
-                    </div>
-                    
-
-                    <div class="my-work-card-body">
-                        <span class="my-work-lang">Language used</span>
-                        <ul class="my-work-card-list grid-2">
-                            <li class="my-work-list-item">HTML/CSS</li>
-                            <li class="my-work-list-item">JS</li>
-                            <li class="my-work-list-item">React</li>
-                            <li class="my-work-list-item">NODJS</li>
-                            <li class="my-work-list-item">SQL</li>
-
-                        </ul>
-                    </div>
-                    <div class="my-work-card-footer">
-                        <ul class="my-work-card-list grid-2">
-                            <li class="my-work-list-item"><a href="#" class="my-work-card-link visit">Visit</a></li>
-                            <li class="my-work-list-item"><a href="#" class="my-work-card-link code">Code</a></li>
-                           
-                        </ul>
-                        
-                        
-                    </div>
-                </div>
-                
-                <div class="my-work-card">
-                    <div class="my-work-card-heading">
-                        <div class="my-work-card-image">
-                            <img src="https://source.unsplash.com/bs2Ba7t69mM" alt="Project Photo" class="my-work-img">
-                        </div>
-                        <h3 class="my-work-card-title">Project Name</3>
-                    
-                    </div>
-                    
-
-                    <div class="my-work-card-body">
-                        <span class="my-work-lang">Language used</span>
-                        <ul class="my-work-card-list grid-2">
-                            <li class="my-work-list-item">HTML/CSS</li>
-                            <li class="my-work-list-item">JS</li>
-                            <li class="my-work-list-item">React</li>
-                            <li class="my-work-list-item">NODJS</li>
-                            <li class="my-work-list-item">SQL</li>
-
-                        </ul>
-                    </div>
-                    <div class="my-work-card-footer">
-                        <ul class="my-work-card-list grid-2">
-                            <li class="my-work-list-item"><a href="#" class="my-work-card-link visit">Visit</a></li>
-                            <li class="my-work-list-item"><a href="#" class="my-work-card-link code">Code</a></li>
-                           
-                        </ul>
-                        
-                        
-                    </div>
-                </div>
-
-                <div class="my-work-card">
-                    <div class="my-work-card-heading">
-                        <div class="my-work-card-image">
-                            <img src="https://source.unsplash.com/OqtafYT5kTw" alt="Project Photo" class="my-work-img">
-                        </div>
-                        <h3 class="my-work-card-title">Project Name</3>
-                    
-                    </div>
-                    
-
-                    <div class="my-work-card-body">
-                        <span class="my-work-lang">Language used</span>
-                        <ul class="my-work-card-list grid-2">
-                            <li class="my-work-list-item">HTML/CSS</li>
-                            <li class="my-work-list-item">JS</li>
-                            <li class="my-work-list-item">React</li>
-                            <li class="my-work-list-item">NODJS</li>
-                            <li class="my-work-list-item">SQL</li>
-
-                        </ul>
-                    </div>
-                    <div class="my-work-card-footer">
-                        <ul class="my-work-card-list grid-2">
-                            <li class="my-work-list-item"><a href="#" class="my-work-card-link visit">Visit</a></li>
-                            <li class="my-work-list-item"><a href="#" class="my-work-card-link code">Code</a></li>
-                           
-                        </ul>
-                        
-                        
-                    </div>
-                </div>
-                <div class="my-work-card">
-                    <div class="my-work-card-heading">
-                        <div class="my-work-card-image">
-                            <img src="https://source.unsplash.com/SYTO3xs06fU" alt="Project Photo" class="my-work-img">
-                        </div>
-                        <h3 class="my-work-card-title">Project Name</3>
-                    
-                    </div>
-                    
-
-                    <div class="my-work-card-body">
-                        <span class="my-work-lang">Language used</span>
-                        <ul class="my-work-card-list grid-2">
-                            <li class="my-work-list-item">HTML/CSS</li>
-                            <li class="my-work-list-item">JS</li>
-                            <li class="my-work-list-item">React</li>
-                            <li class="my-work-list-item">NODJS</li>
-                            <li class="my-work-list-item">SQL</li>
-
-                        </ul>
-                    </div>
-                    <div class="my-work-card-footer">
-                        <ul class="my-work-card-list grid-2">
-                            <li class="my-work-list-item"><a href="#" class="my-work-card-link visit">Visit</a></li>
-                            <li class="my-work-list-item"><a href="#" class="my-work-card-link code">Code</a></li>
-                           
-                        </ul>
-                        
-                        
-                    </div>
-                </div>
-
+    
                 
             </div>
             <div class="view-more-btn-wrap">
@@ -523,11 +398,12 @@
                 <div class="contact-card">
                     <div class="contact-card-body">
 
-                        <form action="#" class="contact-form">
-                            <div class="input-wrap"><input class="contact-input" type="text" placeholder="Name" required></div>
-                            <div class="input-wrap"><input class="contact-input" type="email" placeholder="Email" required></div>
+                        <form class="contact-form" method="POST" data-netlify="true">
+                            <div class="input-wrap"><input class="contact-input" type="text" placeholder="Name" required name="name"></div>
+                            <div class="input-wrap"><input class="contact-input" type="email" placeholder="Email" required name="email"></div>
                             <div class="input-wrap"><input class="contact-input" type="text" placeholder="Subject" required></div>
-                            <div class="input-wrap"><textarea class="contact-input" cols="30" rows="10" placeholder="Message.." required></textarea></div>
+                            <div class="input-wrap"><textarea class="contact-input" cols="30" rows="10" placeholder="Message.." required name="message"></textarea></div>
+                            <div data-netlify-recaptcha="true"></div>
 
                             <button class="form-btn" type="submit">Submit</button>
                         </form>
@@ -608,6 +484,14 @@
         </div>
 
     </footer>
+
+    <a class="scroll-link go-top-link" href="#home">
+    <svg class="back-up-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em"
+        preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+        <path fill="currentColor"
+            d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" />
+    </svg>
+    </a>
 
   
 </body>

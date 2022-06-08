@@ -1,62 +1,20 @@
 
-const projectList = [
+ import {projectList} from  './data.js';
 
-    {
-        id:1,
-        type:"web",
-        img:"https://source.unsplash.com/p-xSl33Wxyc",
-        title:"let",
-        language:["HTML/CSS","js","React","SQL",],
-        visit:"https://www.google.com/",
-        code:"www.linktocode.com",
-    },
-    {
-        id:2,
-        type:"web",
-        img:"https://source.unsplash.com/bs2Ba7t69mM",
-        title:"Project Name",
-        language:["HTML/CSS","js","React","SQL",],
-        visit:"www.linktolife.com",
-        code:"www.linktocode.com",
-    },
-    {
-        id:3,
-        type:"mobile",
-        img:"https://source.unsplash.com/OqtafYT5kTw",
-        title:"Project Name",
-       language:["HTML/CSS","js","React","SQL",],
-        visit:"www.linktolife.com",
-        code:"www.linktocode.com",
-    },
-    {
-        id:4,
-        type:"mobile",
-        img:"https://source.unsplash.com/SYTO3xs06fU",
-        title:"Project Name",
-        language:["HTML/CSS","js","React","SQL",],
-        visit:"www.linktolife.com",
-        code:"www.linktocode.com",
-    },
-    {
-        id:5,
-        type:"api",
-        img:"/img/profile.jpeg",
-        title:"Project Name",
-        language:["HTML/CSS","js","React","NoSQL",],
-        visit:"www.linktolife.com",
-        code:"www.linktocode.com",
-    },
 
-     {
-        id:6,
-        type:"api",
-        img:"https://secure.img1-cg.wfcdn.com/im/92316237/resize-h445%5Ecompr-r85/5575/55758946/Wrapped+Canvas+Photograph.jpg",
-        title:"cat",
-        language:["fish","js","feed","eat",],
-        visit:"www.linktolife.com",
-        code:"www.linktocode.com",
-    },
-]
+
+
+// Project Nav 
+
+const dropdownBtn = document.querySelector(".dropdown-span");
+const dropdownIcon = document.querySelector(".dropdown-icon-span");
+const dropdownOption = document.querySelector(".check-box-wraper");
+
+dropdownBtn.addEventListener("click", function() {
+    dropdownOption.classList.toggle("project-active-togler");
+    dropdownIcon.classList.toggle("dropdown-icon-change");
+})
+
 
  
 const projectContentWrap = document.querySelector(".my-work-contenet");
@@ -169,10 +127,10 @@ filterBtn.forEach(function(btn) {
 // Adding Search Bar Function 
   
    const myinput = searchInput.addEventListener("input", function(e) {
-        const inputValue = e.target.value
+        const inputValue = e.target.value.toLowerCase()
         
         const projectSearch = projectList.filter(function (itemFind) {
-            if (itemFind.title.includes(inputValue)) {
+            if (itemFind.title.toLowerCase().includes(inputValue)) {
                 return itemFind
             }
         })
@@ -240,6 +198,5 @@ checkAllBtn.addEventListener('click',function () {
 })
 
 }
-
 
 
